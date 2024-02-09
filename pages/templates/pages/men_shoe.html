@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>men shoe</h1>
+    {% for product in products %}
+    <div>
+        <a href="{% url 'pages:product' product.id %}">
+            <p>{{product.brand}}</p>
+            <p>{{product.name}}</p>
+        </a>
+        <small>R {{product.price}}.00</small>
+    </div>
+    {% endfor %}
+{% endblock content %}
